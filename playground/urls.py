@@ -1,5 +1,5 @@
 from django.urls import path
-import views
+from . import views
 
 
 urlpatterns = [
@@ -10,6 +10,9 @@ urlpatterns = [
     # path("hello/big"), views.sayBig),
     path("hello/custom", views.SayBigCustom),
 
-    path("crud/", views.handleCrud)
+    path("crud/", views.handleCrud),
 
+    path('set_cookie/', views.set_cookie),
+    path('get_cookie/', views.get_cookie),
+    path('ws/', views.my_websocket)
 ]
